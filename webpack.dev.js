@@ -26,11 +26,12 @@ https://webpack.js.org/concepts/mode/
 module.exports = {
     mode: 'development', 
     entry:{
-        index:'./src/index.js'
+        index:'./src/index.jsx'
     },
     output:{
         path:path.join(__dirname,"dist"),
-        filename:"[name].js"
+        filename:"[name].js",
+        publicPath: '/'
     },
     module:{
         rules:[
@@ -87,6 +88,7 @@ module.exports = {
         hot: true,
         https: false,
         port: 9000,
+        historyApiFallback: true,
         compress: true,//gzip
         proxy: {
           "/api": "http://localhost:9000"
