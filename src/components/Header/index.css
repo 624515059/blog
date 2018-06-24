@@ -1,0 +1,8 @@
+.headerWrap { height: 60px; width: 100%; background-color: #0A0E11;}
+.headerBox { margin: 0 auto; width: 1130px; height: 60px; line-height: 60px; color: #fff;}
+.headerBox img { width: 50px; vertical-align: middle;}
+.headerBox span { padding-left: 20px; font-size: 18px;}
+.headerBox ul {float: right;}
+.headerBox ul li {float: left; margin-right: 80px;}
+.headerBox ul li a { color:rgba(255,255,255,.7);}
+.headerBox ul li a:hover { color: #fff;}

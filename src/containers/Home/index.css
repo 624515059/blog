@@ -1,0 +1,4 @@
+.homeBanner {position: relative; height: 600px; text-align: center; overflow: hidden; background-color: #393D49;}
+.homeBannerBg {background-image: url(//res.layui.com/static/images/layui/banner1.jpg?v=0); background-size: cover; background-position:center 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.homeBannerMain {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.homeBannerMain p { position: relative; top: 230px; font-size: 36px; color: #fff;}

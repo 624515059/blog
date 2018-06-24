@@ -28,8 +28,7 @@ https://webpack.js.org/concepts/mode/
 module.exports = {
     mode: 'production', 
     entry:{
-        index:'./src/index.js',
-        my:'./src/my.js'
+        index:'./src/index.jsx'
     },
     output:{
         path:path.join(__dirname,"dist"),
@@ -62,7 +61,7 @@ module.exports = {
                   {
                     loader: 'url-loader',
                     options: {
-                      limit: 2000
+                      limit: 5000
                     }
                   }
                 ]
@@ -84,7 +83,6 @@ module.exports = {
         }),
         new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
-        new HtmlWebpackPlugin(getHtmlConfig('my','个人中心')),
 
     ],
     resolve:{
