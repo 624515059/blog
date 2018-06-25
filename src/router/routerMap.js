@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import Home from '../containers/Home'
 import Me from '../containers/Me'
+import Detail from '../containers/Detail'
+import List from '../containers/List'
 import NotFound from '../containers/NotFound'
 
 //react router api
@@ -18,7 +20,9 @@ class RouterMap extends Component {
                 <div>
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path='/me/:id' component={Me} />
+                        <Route path='/me/' component={Me} />
+                        <Route path='/list' component={List} />
+                        <Route path='/detail/:id' component={Detail} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>

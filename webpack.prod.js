@@ -82,7 +82,7 @@ module.exports = {
             debug:false
         }),
         new ExtractTextPlugin('[name].css'),
-        new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('index', 'this is a blog')),
 
     ],
     resolve:{

@@ -14,10 +14,10 @@ class Header extends Component {
                             <Link to="/">首页</Link>
                         </li>
                         <li>
-                            <Link to="/ssss">文章</Link>
+                            <Link to="/list">文章</Link>
                         </li>
                         <li>
-                            <Link to="/me/11">关于</Link>
+                            <Link to="/me">关于</Link>
                         </li>
                     </ul>
                 </div>

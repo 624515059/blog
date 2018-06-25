@@ -22,3 +22,4 @@ a:focus{outline:none;}
 .clearfix { *zoom:1;}
 
 .box { margin: 0 auto; padding-bottom: 50px; width: 1130px; height: auto;}
+.minHeight {min-height: 300px;}

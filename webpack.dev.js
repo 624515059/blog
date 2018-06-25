@@ -76,7 +76,7 @@ module.exports = {
         //server 热更新 配置
         new webpack.HotModuleReplacementPlugin(), 
 
-        new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('index','this is a blog')),
 
     ],
     resolve:{
