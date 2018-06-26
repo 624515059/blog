@@ -15,7 +15,7 @@ class Me extends Component {
             this.setState({
                 show: true
             })
-        }, 1000);
+        }, 500);
     }
     render() {
         const { show } = this.state;
@@ -25,7 +25,7 @@ class Me extends Component {
             <Timeline.Item color="green">
                 <p>webpack  -- 2018.06</p>
                 <p>react</p>
-                <p>es6</p>
+                <p>es6/7</p>
                 <p>antd</p>
                 <p>fetch</p>
                 <p>react-router</p>
