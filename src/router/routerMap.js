@@ -9,6 +9,8 @@ import Me from '../containers/Me'
 import Detail from '../containers/Detail'
 import Lists from '../containers/Lists'
 import NotFound from '../containers/NotFound'
+import Admin from '../containers/Admin'
+import Login from '../containers/Login'
 
 //react router api
 //https://reacttraining.com/react-router/web/guides/philosophy
@@ -23,6 +25,8 @@ class RouterMap extends Component {
                         <Route path='/me/' component={Me} />
                         <Route path='/lists' component={Lists} />
                         <Route path='/detail/:id' component={Detail} />
+                        <Route path='/login' component={Login} />
+                        <Route path='/admin' component={Admin} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>

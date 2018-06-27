@@ -1,4 +1,5 @@
 import { Component } from "react"
+import { Link } from "react-router-dom";
 import { List, Avatar, Button, Spin } from 'antd'
 import App from '../App'
 import './index.css'
@@ -58,7 +59,7 @@ class Lists extends Component {
                             <List.Item>
                                 <List.Item.Meta
                                     avatar={<Avatar icon="user" />}
-                                    title={<a href="javasript:;">{item.name.last}</a>}
+                                    title={<Link to="/detail/1">{item.name.last}</Link>}
                                     description="2018.06.26"
                                 />
                             </List.Item>
