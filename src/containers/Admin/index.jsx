@@ -1,55 +1,56 @@
 import { Component } from "react"
-import { Table, Icon, Divider } from 'antd';
+import { Table, Divider } from 'antd';
 import './index.css'
-
+import HeaderAdmin from "../../components/HeaderAdmin";
 const columns = [{
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
+    title: '标题',
+    dataIndex: 'title',
+    key: 'title',
     render: text => <a href="javascript:;">{text}</a>,
 }, {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
+    title: '时间',
+    dataIndex: 'time',
+    key: 'time',
 }, {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-}, {
-    title: 'Action',
+    title: '操作',
     key: 'action',
     render: (text, record) => (
         <span>
-            <a href="javascript:;">Action 一 {record.name}</a>
+            <a href="javascript:;">修改{record.title}</a>
             <Divider type="vertical" />
-            <a href="javascript:;">111</a>
-            <Divider type="vertical" />
-            <a href="javascript:;">Delete</a>
+            <a href="javascript:;">删除</a>
         </span>
     ),
 }];
 
 const data = [{
     key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
+    title: '标题1',
+    time: 2018,
 }, {
     key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
+    title: '标题2',
+    time: 2018,
 }, {
     key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
+    title: '标题3',
+    time: 2018,
 }];
 
 class Admin extends Component {
+    onChange(o){
+        console.log(o);
+    }
     render() {
+        const o = { 
+            defaultCurrent: 1,
+            total:50
+        }
         return (
-            <Table columns={columns} dataSource={data} />
+            <div>
+                <HeaderAdmin />
+                <Table bordered="true" size="small"  columns={columns} dataSource={data} pagination={o} onChange={this.onChange.bind(this)}/>
+            </div>
         )
     }
 }
