@@ -1,14 +1,13 @@
 import { Component } from "react"
 import { Link } from "react-router-dom";
 import './index.css'
-import logo from './logo.png'
 
 class Header extends Component {
     render() {
         return (
             <div className="headerWrap">
                 <div className="headerBox">
-                    <img src={logo} /> <span>LLの博客</span>
+                    <img src="//img.58cdn.com.cn/shangjiatong/orders/logo.png" /> <span>LLの博客</span>
                     <ul className="clearfix">
                         <li>
                             <Link to="/">首页</Link>

@@ -11,10 +11,10 @@ const getHtmlConfig = (name, title) => {
     return {
         title:title,
         inject : true, 
-        filename: 'view/' + name + '.html', // 配置输出文件名和路径
+        filename: './' + name + '.html', // 配置输出文件名和路径
         template: 'src/tpl.html', // 配置文件模板
         chunks: ["common",name],//文件名
-        hash:true,//哈希
+        hash:false,//哈希
         cache: true,//缓存
     }
 };
