@@ -91,7 +91,7 @@ module.exports = {
         historyApiFallback: true,
         compress: true,//gzip
         proxy: {
-          "/api": "http://localhost:9000"
+          "/": "http://localhost:3000" //所有请求全部指向3000端口
         },
          // 允许开发服务器访问本地服务器的包JSON文件，防止跨域
         headers: {
