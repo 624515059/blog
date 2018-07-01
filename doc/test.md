@@ -28,3 +28,5 @@
 留言
 创建留言：POST /comments
 删除留言：GET /comments/:commentId/remove
+
+mongod 开启数据库
