@@ -9,7 +9,11 @@ module.exports = {
     },
     //获取文章列表
     getAll(){
-        return Lists.find()
+        return Lists.find().lean()
+    },
+    //删除文章
+    del(obj){
+        return Lists.remove(obj)
     }
 
 }

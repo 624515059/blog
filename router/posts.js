@@ -7,9 +7,9 @@ module.exports = (req, res) => {
     ListsModel.create({ title, content })
         .then(function (result) {
             console.log(result);
-            res.json({code:1})
+            res.json({ code: 0, msg: 'ok' })
         })
-        .catch(()=>{
-            res.json({ code: 2})
+        .catch(() => {
+            res.json({ code: 1, msg: 'error' })
         })
 }

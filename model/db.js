@@ -1,7 +1,5 @@
 const config = require('config-lite')(__dirname)
 const mongoose = require('mongoose')
-// const moment = require('moment')
-// const objectIdToTimestamp = require('objectid-to-timestamp')
 
 mongoose.connect(config.mongodb)
 const db = mongoose.connection;

@@ -5,7 +5,10 @@ const router = express.Router()
 router.post('/create', require('./posts'))
 
 //管理列表页
-router.get('/getAll', require('./admin'))
+router.get('/getAll', require('./admin').getAll)
+
+//删除
+router.get('/del', require('./admin').del)
 
 
 module.exports =  router;
