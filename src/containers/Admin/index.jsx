@@ -2,6 +2,7 @@ import { Component } from "react"
 import { Table, Divider } from 'antd';
 import './index.css'
 import HeaderAdmin from "../../components/HeaderAdmin";
+import { Link } from "react-router-dom";
 import { get } from '../../util/util'
 
 class Admin extends Component {
@@ -49,7 +50,9 @@ class Admin extends Component {
             title: '标题',
             dataIndex: 'title',
             key: 'title',
-            render: text => <a href="javascript:;">{text}</a>,
+            render: (text, record) => (
+                <a href={`/detail/${record._id}`} target="_blank">{text}</a>
+            ),
         }, {
             title: '时间',
             dataIndex: 'time',
@@ -59,20 +62,20 @@ class Admin extends Component {
             key: 'action',
             render: (text, record) => (
                 <span>
-                    <a href="javascript:;" data-id={record._id}>修改</a>
+                    <Link to={`/posts?id=${record._id}`}>修改</Link>
                     <Divider type="vertical" />
                     <a href="javascript:;" onClick={this.delFn.bind(this, record._id)}>删除</a>
                 </span>
             ),
         }]
-        const o = {
+        const paginationObj = {
             defaultCurrent: 1,
             //total:50
         }
         return (
             <div>
                 <HeaderAdmin />
-                <Table bordered="true" size="small" columns={columns} dataSource={data} rowKey="_id" pagination={o} onChange={this.onChange.bind(this)} />
+                <Table bordered="true" size="small" columns={columns} dataSource={data} rowKey="_id" pagination={paginationObj} onChange={this.onChange.bind(this)} />
             </div>
         )
     }

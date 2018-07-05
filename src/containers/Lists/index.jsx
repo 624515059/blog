@@ -5,32 +5,39 @@ import App from '../App'
 import './index.css'
 import { get } from '../../util/util'
 
+var page = 0;
+
 class Lists extends Component {
-    state = {
-        loading: true,
-        loadingMore: false,
-        showLoadingMore: true,
-        data: [],
+    constructor(props){
+        super(props);
+        this.state = {
+            loading: true,
+            loadingMore: false,
+            showLoadingMore: true,
+            data: [],
+        }
     }
     async componentDidMount() {
+        page = 0;
         const res = await this.getData();
         this.setState({
             loading: false,
-            data: res.results,
+            data: res.data,
         });
     }
     getData() {
-        return get('https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo')
+        return get(`/api/getList?page=${page}`)
             .then(res => {
                 return res.json()
             });
     }
     async onLoadMore() {
+        page++;
         this.setState({
             loadingMore: true
         });
         const res = await this.getData();
-        const data = this.state.data.concat(res.results);
+        const data = this.state.data.concat(res.data);
         this.setState({
             data,
             loadingMore: false,
@@ -59,8 +66,8 @@ class Lists extends Component {
                             <List.Item>
                                 <List.Item.Meta
                                     avatar={<Avatar icon="user" />}
-                                    title={<Link to="/detail/1">{item.name.last}</Link>}
-                                    description="2018.06.26"
+                                    title={<Link to={`/detail/${item._id}`}>{item.title}</Link>}
+                                    description={item.time}
                                 />
                             </List.Item>
                         )}

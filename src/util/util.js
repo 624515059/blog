@@ -27,6 +27,12 @@ export const get = path => request('GET', path);
 export const post = (path, body) => request('POST', path, body);
 export const put = (path, body) => request('PUT', path, body);
 export const del = (path, body) => request('DELETE', path, body);
+export const GetQueryString = (name) => {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) return r[2];
+	return null
+};
 export const util={
 	_createXhr:function(){
 		let xhr;
