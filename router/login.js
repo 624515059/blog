@@ -14,6 +14,7 @@ module.exports = (req, res) => {
             if (sha1(pwd) !== result.pwd) {
                 return res.json({ code: 1, msg: '密码错误' })
             }
+            req.session.user = 1;
             res.json({ code: 0, msg: 'ok' })
         })
         .catch(() => {

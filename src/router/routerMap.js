@@ -12,6 +12,7 @@ import NotFound from '../containers/NotFound'
 import Admin from '../containers/Admin'
 import Login from '../containers/Login'
 import Posts from '../containers/Posts'
+import Out from '../containers/Out'
 
 //react router api
 //https://reacttraining.com/react-router/web/guides/philosophy
@@ -29,6 +30,7 @@ class RouterMap extends Component {
                         <Route path='/login' component={Login} />
                         <Route path='/admin' component={Admin} />
                         <Route path='/posts' component={Posts} />
+                        <Route path='/out' component={Out} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>

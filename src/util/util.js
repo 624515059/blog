@@ -13,6 +13,7 @@ export default function request(method, url, body) {
 			'Content-Type': 'application/json',
 			'Accept': 'application/json'
 		},
+		credentials: 'include',
 		body
 	}).then((res) => {
 		if (res.status >= 200 && res.status < 300) {

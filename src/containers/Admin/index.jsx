@@ -20,6 +20,11 @@ class Admin extends Component {
             })
             .then(res => {
                 console.log(res)
+                if (res.code == -5) {
+                    alert(res.msg)
+                    this.props.history.push('/login')
+                    return;
+                }
                 alert("删除成功")
                 window.location.reload();
             })
@@ -33,6 +38,9 @@ class Admin extends Component {
             this.setState({
                 data: res.data
             })
+        }else if(res.code==-5){
+            alert(res.msg)
+            this.props.history.push('/login')
         }
     }
     getData() {

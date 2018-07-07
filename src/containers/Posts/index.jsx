@@ -27,6 +27,11 @@ class Posts extends Component {
                         const { title, content } = res.data;
                         this.setState({ id, title, content })
                     }
+                    if (res.code == -5) {
+                        alert(res.msg)
+                        this.props.history.push('/login')
+                        return;
+                    }
                 })
                 .catch(error => {
                     console.log(error)
@@ -45,6 +50,11 @@ class Posts extends Component {
                 return res.json()
             })
             .then(res => {
+                if (res.code == -5) {
+                    alert(res.msg)
+                    this.props.history.push('/login')
+                    return;
+                }
                 res.code == 0 ? alert(res.msg) : alert(res.msg)
             })
             .catch(error => {
@@ -60,6 +70,11 @@ class Posts extends Component {
                 return res.json()
             })
             .then(res => {
+                if (res.code == -5) {
+                    alert(res.msg)
+                    this.props.history.push('/login')
+                    return;
+                }
                 res.code == 0 ? alert(res.msg) : alert(res.msg)
             })
             .catch(error => {
