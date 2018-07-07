@@ -30,3 +30,6 @@
 删除留言：GET /comments/:commentId/remove
 
 mongod 开启数据库
+supervisor index.js
+npm run dev
+http://www.cmd5.com/

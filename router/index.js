@@ -22,4 +22,7 @@ router.get('/getList', require('./lists').getList)
 //前端详情页
 router.get('/getDetail', require('./detail').getDetail)
 
+//登录
+router.post('/login', require('./login'))
+
 module.exports =  router;

@@ -1,4 +1,3 @@
-const marked = require('marked')
 const Lists = require('./db').Lists
 
 module.exports = {

@@ -10,10 +10,11 @@ db.once('open',  ()=> {
 
 //创建一个User模型。 语法mongoose.model(模型名字，Schema);
 //这里省略了一步，就是schema是通过new mongoose.schema({})创建的。
+//https://blog.csdn.net/love4Mario/article/details/52171052  查询自己创建的表
 exports.User = mongoose.model('User', {
-    name: { type: 'string', required: true },
-    password: { type: 'string', required: true }
-})
+    user: { type: 'string', required: true },
+    pwd: { type: 'string', required: true }
+}, 'user')
 
 exports.Lists = mongoose.model('Lists', {
     title: { type: 'string', required: true },
