@@ -19,7 +19,7 @@
             "ref":"origin/master",
             "repo":"git@github.com:624515059/qq.git",
             "path":"/www/",
-            "ssh_options":"StrichHostKeyChecking=no",
+            "ssh_options":"StrictHostKeyChecking=no",
             "env":{
                 "NODE_ENV":"production"
             }
