@@ -1,5 +1,5 @@
 module.exports = {
-    port: 3333,
+    port: 1234,
     //mongodb: 'mongodb://localhost:27017/qq',
     mongodb: 'mongodb://39.106.11.71:27017/qq',
     session: {
