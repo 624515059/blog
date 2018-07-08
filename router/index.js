@@ -30,5 +30,4 @@ router.post('/login', require('./login'))
 //退出
 router.get('/out', checkOut)
 
-
 module.exports = router;

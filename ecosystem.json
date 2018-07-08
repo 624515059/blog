@@ -1,0 +1,28 @@
+{
+    "apps":[
+        {
+            "name":"qq",
+            "script":"index.js",
+            "env":{
+                "COMMON_VARIABLE":"true"
+            },
+            "env_production":{
+                "NODE_ENV":"production"
+            }
+        }
+    ],
+    "deploy":{
+        "aliyun":{
+            "user":"root",
+            "host":["39.106.11.71"],
+            "port":"22",
+            "ref":"origin/master",
+            "repo":"git@github.com:624515059/qq.git",
+            "path":"/www/",
+            "ssh_options":"StrichHostKeyChecking=no",
+            "env":{
+                "NODE_ENV":"production"
+            }
+        }
+    }
+}
