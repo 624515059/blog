@@ -40,4 +40,6 @@ CentOs 重启ssh
 netstat -ntpl
 scp /code/qq/package.json root@39.106.11.71:/opt/qq
 
-http://musiclhn.top:3000/
+http://demo.musiclhn.top
+
+pm2 deploy ecosystem.json aliyun
